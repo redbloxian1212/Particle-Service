@@ -2,6 +2,6 @@
 -- Created 02-10-26 23:15
 -- Format: MM-DD-YY HH:MM
 
-local Public = {}
+local ParticleClass = {}
 
-return Public
+return ParticleClass
