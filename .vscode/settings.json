@@ -1,0 +1,14 @@
+{
+    //Editor theme
+    "editor.fontFamily": "'JetBrains Mono', 'Cascadia Code', Consolas, 'Courier New', monospace",
+    "editor.fontSize": 14,
+    "editor.fontWeight": "450",
+    "editor.lineHeight": 22,
+    "editor.letterSpacing": 0.5,
+    "editor.fontLigatures": true,
+    //Luau
+    "luau-lsp.plugin.enabled": true,
+    "luau-lsp.plugin.port": 3667,
+    "luau-lsp.sourcemap.enabled": true,
+    "luau-lsp.sourcemap.autogenerate": true,
+}

@@ -1,0 +1,23 @@
+{
+  "name": "Particle thing",
+  "tree": {
+    "$className": "DataModel",
+    "ReplicatedStorage": {
+      "ParticleService": {
+        "$path": "ParticleService"
+      }
+    },
+    "ServerScriptService": {
+      "Test": {
+        "$path": "tests/server"
+      }
+    },
+    "StarterPlayer": {
+      "StarterPlayerScripts": {
+        "Test": {
+          "$path": "tests/client"
+        }
+      }
+    }
+  }
+}
