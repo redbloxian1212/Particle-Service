@@ -11,6 +11,7 @@ local ERRORS = {
 	NOT_REGISTERED = `{Prefix} No particle registered with name: `,
 	NEED_STRING = `{Prefix} Expected string, got: `,
 	NEED_PART = `{Prefix} Expected BasePart, got: `,
+	NEED_CFRAME = `{Prefix} Expected CFrame, got: `,
 }
 
 local ParticleService = {
@@ -20,7 +21,7 @@ local ParticleService = {
 
 function ParticleService:Register(name: string, container: Attachment)
 	if self._cache[name] then
-		warn(ERRORS.DUPLICATED_REGISTER .. name)
+		warn(ERRORS.DUPLICATED_REGISTER .. container:GetFullName())
 		return
 	end
 	if typeof(name) ~= "string" then
@@ -36,6 +37,15 @@ function ParticleService:Register(name: string, container: Attachment)
 end
 
 function ParticleService:SimulateAtCFrame(name: string, cframe: CFrame)
+	if typeof(name) ~= "string" then
+		warn(ERRORS.NEED_STRING .. typeof(name))
+		return
+	end
+	if typeof(cframe) ~= "CFrame" then
+		warn(ERRORS.NEED_CFRAME .. typeof(cframe))
+		return
+	end
+
 	local obj = self._cache[name]
 	if obj then
 		obj:Simulate(cframe)
