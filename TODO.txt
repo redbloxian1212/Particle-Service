@@ -1,1 +1,6 @@
-TODO: Add types for props
+Currently there is no way to add custom properties on the containers.
+So it will emit based on how much the emission rate property has.
+
+Documentation sucks btw
+
+Add diagnostic numbers for the benchmarks. Example: Peak pool count, total objects created
