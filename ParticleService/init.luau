@@ -1,11 +1,16 @@
 -- CONFIGURATION
 
 local ParticleClass = require(script.ParticleClass)
+local Constants = require(script.Constants)
 
-local ParticleService = {}
+local ParticleService = {
+	_registry = {} :: { [BasePart]: boolean },
+}
 
 function ParticleService:Register(name: string, properties: any, container: BasePart)
-	-- some code
+	if self._registeredContainers[container] then
+		return
+	end
 end
 
 function ParticleService:SimulateAtCFrame(name: string, cframe: CFrame)
